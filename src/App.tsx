@@ -90,11 +90,19 @@ export const App = () => {
               <Route path="/Workplace/Manager/schedule" element={<MyCalendar/>}/>
               <Route path="/Workplace/Manager/viewEmployee" element={<ViewEmployeePage/>}/>
               <Route path="/Workplace/Manager/Report" element={<ReportManager/>}/>
-              <Route path="/Admin" element={<AdminPage />} />
               <Route element={<ProtectedRoute allowedRoles={['ROLE_INTERN']} />}>
                     <Route path="/intern" element={<DashboardPage />} />
                     <Route path="/intern/course/:courseId" element={<CourseActivityPage />} />
                     <Route path="/intern/feedback" element={<FeedbackPage/>} />
+                    <Route path="/intern/sendFeedback/:courseId" element={<CourseFeedbackPage/>} />
+              </Route>
+              <Route element={<ProtectedRoute allowedRoles={['ROLE_ADMIN']} />}>
+              <Route path="/Admin" element={<AdminPage />} />
+              <Route path="/Admin/CreateCompany" element={<AdminCreateCompanyPage />} />
+              <Route path="/Admin/ViewUser" element={<AdminViewUserInSystem />} />
+              <Route path="/Admin/viewRequest" element={<AdminViewRequestPage/>} />
+              <Route path="Admin/CreateUser" element={<AdminCreateUser />} />
+              <Route path="/Admin/ViewAllCompany" element={<AdminViewAllCompanyPage/>}/>
               </Route>
               <Route path="/mentor" element={<MentorDashboard />} />
               <Route path="/mentor/:courseId" element={<MentorActivityPage/>}/>
@@ -105,11 +113,6 @@ export const App = () => {
               <Route path="verify" element={<ForgotPasswordPage />} />
               <Route path="/forgotPassword" element={<ForgotPasswordPage2 />} />
               <Route path="/verifyPassword" element={<VerificationForgotPage />} />
-              <Route path="/Admin/CreateCompany" element={<AdminCreateCompanyPage />} />
-              <Route path="/Admin/ViewUser" element={<AdminViewUserInSystem />} />
-              <Route path="/Admin/viewRequest" element={<AdminViewRequestPage/>} />
-              <Route path="Admin/CreateUser" element={<AdminCreateUser />} />
-              <Route path="/Admin/ViewAllCompany" element={<AdminViewAllCompanyPage/>}/>
               <Route path="/mentor/ViewCourse" element={<MentorViewAllCoursePage/>}/>
               <Route path="/mentor/createActivities" element={<MentorCreateActivitiesForCourse/>}/>
               <Route path="/mentor/viewactivities" element={<MentorViewAllActivitiesInCourse/>}/>

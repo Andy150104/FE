@@ -1,5 +1,5 @@
 #logo {
-    width: 100%;
+    width: 100% !important;
 }
 
 #btn-show-more {
@@ -38,12 +38,23 @@
   cursor: pointer;
 }
 #job-block {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #86868652;
-    padding: 3%;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: #86868652 !important;
+    padding: 3% !important;
 }
-
+#job-block-in-job-detail {
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: #86868652 !important;
+  padding: 1% !important;
+}
+#job-block-in-job-list {
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: #86868652 !important;
+  padding: 3% !important;
+}
 #p-job, #p-location {
     font-size: 1.5rem;
 }

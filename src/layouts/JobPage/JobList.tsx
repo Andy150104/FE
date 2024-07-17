@@ -115,7 +115,7 @@ export const JobList: React.FC<JobListProps> = ({ search }) => {
           transition={{ duration: 0.5 }}
           >
           <div key={job.id} id="job" onClick={() => handleJobClick(job.id)}>
-            <div className="container-fluid rounded mt-5 mb-5" id="job-block">
+            <div className="container-fluid rounded mt-5 mb-5" id="job-block-in-job-list">
               <div className="row">
                 <div className="col-md-2">
                <JobLogo jobId={job.id}/>

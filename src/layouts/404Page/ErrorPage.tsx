@@ -1,8 +1,4 @@
 import React from "react";
-import { AboutUs } from "../HeaderAndFooter/AboutUs";
-import { Footer } from "../HeaderAndFooter/Footer";
-import { Header } from "../HeaderAndFooter/Header";
-import JobCategory from "../HeaderAndFooter/JobCategory";
 import { Fade } from "react-awesome-reveal";
 import "../../css/error.css";
 import { Link } from "react-router-dom";
@@ -10,14 +6,13 @@ import { Link } from "react-router-dom";
 export const ErrorPage = () => {
   return (
     <>
-      <Fade>
-        <section className="page_404 ">
+        <section className="page_404 position-absolute top-50 start-50 translate-middle">
           <div className="container">
             <div className="row">
+            <h1 className="text-center-h1 error">404 Url Not Found</h1>
               <div className="col-sm-12 ">
                 <div className="col-sm-10 col-sm-offset-1  text-center">
                   <div className="four_zero_four_bg">
-                    <h1 className="text-center-h1 ">404</h1>
                   </div>
 
                   <div className="contant_box_404">
@@ -34,7 +29,6 @@ export const ErrorPage = () => {
             </div>
           </div>
         </section>
-      </Fade>
     </>
   );
 };

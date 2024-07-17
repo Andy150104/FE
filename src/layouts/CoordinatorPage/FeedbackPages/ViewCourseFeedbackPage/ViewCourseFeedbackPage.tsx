@@ -5,6 +5,7 @@ import {NavbarCoordinator} from "../../../HeaderAndFooter/Navbar/NavbarCoordinat
 import {Footer} from "../../../HeaderAndFooter/Footer";
 import fetchCourseFeedbackContent from "../../../../apis/CoordinatorApis/GetCourseFeedback";
 import CourseFeedbackContent from "../../../../model/Coordinator/CourseFeedbackContent";
+import Cookies from "js-cookie";
 
 const ViewCourseFeedbackPage = ()=>{
     //get course id
@@ -15,7 +16,7 @@ const ViewCourseFeedbackPage = ()=>{
     const [user, setUser] = useState<{ user_id: number } | null>(null);
 
     useEffect(() => {
-        const storedUser = localStorage.getItem("user");
+        const storedUser = Cookies.get("user");
         if (storedUser) {
             setUser(JSON.parse(storedUser));
         }

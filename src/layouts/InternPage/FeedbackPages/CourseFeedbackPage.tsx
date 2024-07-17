@@ -9,6 +9,7 @@ import CourseName from "../CourseActivityPage/CourseName";
 import SendCourseFeedback from "../../../apis/InternApis/SendCourseFeedback";
 import CourseFeedbackVerify from "../../../apis/InternApis/CourseFeedbackVerify";
 import "../../../css/Intern/SendFeedbackPage.css"
+import Cookies from "js-cookie";
 const CourseFeedbackPage:React.FC = () =>{
     const {courseId} = useParams();
     const checkedCourseId = courseId ?? "";
@@ -17,7 +18,7 @@ const CourseFeedbackPage:React.FC = () =>{
 
     //-------- Check User ---------
     useEffect(() => {
-        const storedUser = localStorage.getItem("user");
+        const storedUser = Cookies.get("user");
         if (storedUser) {
             setUser(JSON.parse(storedUser));
         }

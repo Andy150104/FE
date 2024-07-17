@@ -3,7 +3,7 @@
 }
 #square p{
     background-color: rgb(33, 26, 127);
-    height: 100%;
+    height: 12vh;
     font-family: 'Courier New', Courier, monospace;
     color: white;
     padding: 10% 20%;

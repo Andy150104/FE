@@ -88,7 +88,7 @@ export const JobDetailList: React.FC = () => {
     <div className="job-detail">
       <motion.div
         className="container rounded mt-5 mb-5 d-flex justify-content-center align-items-center"
-        id="job-block"
+        id="job-block-in-job-detail"
         initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}

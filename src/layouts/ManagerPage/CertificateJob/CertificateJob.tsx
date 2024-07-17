@@ -122,10 +122,10 @@ export const CertificateJob: React.FC<CertificateGeneratorProps> = ({
                   <p className="certificate-role">{user.companyName}</p>
                 </div>
               </div>
-              <p className="certificate-verification">
+              {/* <p className="certificate-verification">
                 Verify completion at{" "}
                 <a href="http://localhost:3000">http://localhost:3000</a>
-              </p>
+              </p> */}
             </div>
             <div className="d-flex justify-content-center align-items-center">
               <button className="button-send-certificate" onClick={generatePdf}>
